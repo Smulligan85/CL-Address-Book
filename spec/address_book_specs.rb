@@ -46,9 +46,9 @@ RSpec.describe AddressBook do
       entry = book.entries[0]
       book.remove_entry(entry)
 
-      expect(entry.name).not_to eq("Foobar Jones")
-      expect(entry.phone_number).not_to eq("000-111-2222")
-      expect(entry.email).not_to eq("foobar@example.com")
+      expect(entry.name).to eq(nil)
+      expect(entry.phone_number).to eq(nil)
+      expect(entry.email).to eq(nil)
     end
   end
 

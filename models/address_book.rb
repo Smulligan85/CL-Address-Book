@@ -27,14 +27,9 @@ class AddressBook
       if i.name != entry.name
         index += 1
       else
-        @entries.delete(index)
+        @entries.delete(i)
       end
     end
-
-
-
-
-
   end
     
 end
