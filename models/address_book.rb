@@ -21,7 +21,11 @@ class AddressBook
 
   def remove_entry(entry)
 
-    @entries.each { |i| @entries.delete(i) if i == entry }
+    @entries.each do |i| 
+      if i == entry
+        @entries.delete(i)
+      end
+    end
     
   end
 end
