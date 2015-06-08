@@ -46,9 +46,7 @@ RSpec.describe AddressBook do
       entry = book.entries[0]
       book.remove_entry(entry)
 
-      expect(entry.name).to eq(nil)
-      expect(entry.phone_number).to eq(nil)
-      expect(entry.email).to eq(nil)
+      expect(book.entries.size).to eq(0)
     end
   end
 

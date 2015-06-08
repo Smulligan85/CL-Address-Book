@@ -21,15 +21,7 @@ class AddressBook
 
   def remove_entry(entry)
 
-    index = 0
-
-    @entries.each do |i|
-      if i.name != entry.name
-        index += 1
-      else
-        @entries.delete(i)
-      end
-    end
-  end
+    @entries.each { |i| @entries.delete(i) if i == entry }
     
+  end
 end
